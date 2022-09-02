@@ -1,6 +1,6 @@
 import uniqid from 'uniqid'
 import Table from 'react-bootstrap/Table'
-
+import '../style/tableHoraires.css'
 function TableHoraire(props) {
   const dataName = props.datas[props.name] || []
 
@@ -22,17 +22,21 @@ function TableHoraire(props) {
   }
 
   return (
-    <Table striped hover>
-      <thead>
-        <tr className="table-dark">
-          <th>Date</th>
-          <th>Début</th>
-          <th>Fin</th>
-          <th>Salle</th>
-        </tr>
-      </thead>
-      <tbody id="horaire-table-body">{rows()}</tbody>
-    </Table>
+    <div className="row justify-content-center">
+      <div className="col-lg-5">
+        <Table striped hover>
+          <thead>
+            <tr className="table-dark">
+              <th>Date</th>
+              <th>Début</th>
+              <th>Fin</th>
+              <th>Salle</th>
+            </tr>
+          </thead>
+          <tbody id="horaire-table-body">{rows()}</tbody>
+        </Table>
+      </div>
+    </div>
   )
 }
 

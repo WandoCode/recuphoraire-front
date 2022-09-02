@@ -1,0 +1,11 @@
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.layout__title {
+  margin-left: 50px;
+  color: azure;
+}

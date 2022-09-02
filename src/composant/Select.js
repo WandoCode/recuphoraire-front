@@ -12,13 +12,18 @@ function Select(props) {
   })
 
   return (
-    <Form.Select
-      name="techno"
-      id="techno"
-      onChange={(e) => props.getName(e.target.value)}
-    >
-      {options}
-    </Form.Select>
+    <div className="container col-lg-2 mb-4">
+      <Form.Select
+        name="techno"
+        id="techno"
+        onChange={(e) => props.getName(e.target.value)}
+      >
+        <option disabled={true} selected={true}>
+          Technologue
+        </option>
+        {options}
+      </Form.Select>
+    </div>
   )
 }
 

@@ -1,11 +1,11 @@
 import Form from 'react-bootstrap/Form'
 import Container from 'react-bootstrap/Container'
-import Layout from './Layout'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { AuthContext } from '../utils/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import '../style/LoginForm.css'
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001'
 
@@ -39,10 +39,13 @@ function LoginForm(props) {
   }
 
   return (
-    <Layout title="Login">
-      <Container>
-        <div className=" row justify-content-center">
-          <Form className="col-4" onSubmit={handleSubmit}>
+    <div className="container">
+      <div className="row">
+        <h1 className="text-center login__title">Connexion</h1>
+      </div>
+      <div className="row justify-content-center">
+        <div className="col-lg-4  align-self-center">
+          <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label>Nom</Form.Label>
               <Form.Control type="text" onChange={handleUsername} />
@@ -52,12 +55,16 @@ function LoginForm(props) {
               <Form.Control type="password" onChange={handlePassword} />
             </Form.Group>
             <Form.Group>
-              <Form.Control type="submit" />
+              <Form.Control
+                type="submit"
+                className="btn btn-primary"
+                value="Se connecter"
+              />
             </Form.Group>
           </Form>
         </div>
-      </Container>
-    </Layout>
+      </div>
+    </div>
   )
 }
 

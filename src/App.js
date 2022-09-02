@@ -25,7 +25,6 @@ function App() {
   useEffect(() => {
     const newNames = Object.keys(datas)
     setNames(newNames)
-    setCurrentName(newNames[0])
   }, [datas])
 
   const getName = (name) => {
