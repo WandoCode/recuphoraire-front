@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001'
-console.log(process.env.REACT_APP_BASE_URL)
+
 function LoginForm(props) {
   let navigate = useNavigate()
   const { logIn } = useContext(AuthContext)
