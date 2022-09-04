@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { ContextProvider } from './utils/AuthContext'
 import ProtectedRoute from './utils/ProtectedRoute'
 import LoginForm from './composant/LoginForm'
+import Conge from './composant/Conge'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -19,6 +20,14 @@ root.render(
             element={
               <ProtectedRoute>
                 <App />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/out"
+            element={
+              <ProtectedRoute>
+                <Conge />
               </ProtectedRoute>
             }
           />

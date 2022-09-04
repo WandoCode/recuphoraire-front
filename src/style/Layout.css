@@ -8,4 +8,5 @@ header {
 .layout__title {
   margin-left: 50px;
   color: azure;
+  width: 250px;
 }

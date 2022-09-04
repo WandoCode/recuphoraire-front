@@ -1,5 +1,3 @@
-import Form from 'react-bootstrap/Form'
-import Container from 'react-bootstrap/Container'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { AuthContext } from '../utils/AuthContext'
@@ -45,23 +43,36 @@ function LoginForm(props) {
       </div>
       <div className="row justify-content-center">
         <div className="col-lg-4  align-self-center">
-          <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="username">
-              <Form.Label>Nom</Form.Label>
-              <Form.Control type="text" onChange={handleUsername} />
-            </Form.Group>
-            <Form.Group controlId="password">
-              <Form.Label>Mot de passe</Form.Label>
-              <Form.Control type="password" onChange={handlePassword} />
-            </Form.Group>
-            <Form.Group>
-              <Form.Control
-                type="submit"
-                className="btn btn-primary"
-                value="Se connecter"
-              />
-            </Form.Group>
-          </Form>
+          <form onSubmit={handleSubmit}>
+            <label class="form-label" for="username">
+              Nom
+            </label>
+            <input
+              class="form-control"
+              name="username"
+              id="username"
+              type="text"
+              onChange={handleUsername}
+            />
+
+            <label class="form-label" for="password">
+              Mot de passe
+            </label>
+            <input
+              class="form-control"
+              type="password"
+              name="password"
+              id="password"
+              onChange={handlePassword}
+            />
+
+            <input
+              class="form-control"
+              type="submit"
+              className="btn btn-primary"
+              value="Se connecter"
+            />
+          </form>
         </div>
       </div>
     </div>

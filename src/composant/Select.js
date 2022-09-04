@@ -1,5 +1,3 @@
-import Form from 'react-bootstrap/Form'
-
 function Select(props) {
   const orderedNames = props.names.sort()
 
@@ -13,7 +11,8 @@ function Select(props) {
 
   return (
     <div className="container col-lg-2 mb-4">
-      <Form.Select
+      <select
+        class="form-select"
         name="techno"
         id="techno"
         onChange={(e) => props.getName(e.target.value)}
@@ -23,7 +22,7 @@ function Select(props) {
           Technologue
         </option>
         {options}
-      </Form.Select>
+      </select>
     </div>
   )
 }
