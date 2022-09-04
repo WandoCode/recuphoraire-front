@@ -17,8 +17,9 @@ function Select(props) {
         name="techno"
         id="techno"
         onChange={(e) => props.getName(e.target.value)}
+        defaultValue="default"
       >
-        <option disabled={true} selected={true}>
+        <option disabled={true} value="default">
           Technologue
         </option>
         {options}
