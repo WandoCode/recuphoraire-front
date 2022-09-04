@@ -12,7 +12,7 @@ function Select(props) {
   return (
     <div className="container col-lg-2 mb-4">
       <select
-        class="form-select"
+        className="form-select"
         name="techno"
         id="techno"
         onChange={(e) => props.getName(e.target.value)}

@@ -19,11 +19,10 @@ function TableHoraire(props) {
       )
     })
   }
-
   return (
     <div className="row justify-content-center  gx-0">
       <div className="col-lg-4 ">
-        <table class="table table-striped table-hover">
+        <table className="table table-striped table-hover">
           <thead>
             <tr className="table-dark">
               <th>Date</th>

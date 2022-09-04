@@ -32,7 +32,7 @@ function LoginForm(props) {
     const loginIsOk = res.data.authenticate
     if (loginIsOk === 'true') {
       logIn(username)
-      navigate('/')
+      navigate('/horaires')
     }
   }
 
@@ -44,22 +44,22 @@ function LoginForm(props) {
       <div className="row justify-content-center">
         <div className="col-lg-4  align-self-center">
           <form onSubmit={handleSubmit}>
-            <label class="form-label" for="username">
+            <label className="form-label" htmlFor="username">
               Nom
             </label>
             <input
-              class="form-control"
+              className="form-control"
               name="username"
               id="username"
               type="text"
               onChange={handleUsername}
             />
 
-            <label class="form-label" for="password">
+            <label className="form-label" htmlFor="password">
               Mot de passe
             </label>
             <input
-              class="form-control"
+              className="form-control"
               type="password"
               name="password"
               id="password"
@@ -67,9 +67,8 @@ function LoginForm(props) {
             />
 
             <input
-              class="form-control"
               type="submit"
-              className="btn btn-primary"
+              className="form-control btn btn-primary"
               value="Se connecter"
             />
           </form>

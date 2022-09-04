@@ -1,14 +1,9 @@
 import DataManager from './factories/DataManager.js'
 import { useEffect, useState } from 'react'
-import Layout from './composant/Layout.js'
-import Select from './composant/Select.js'
-import TableHoraire from './composant/TableHoraire.js'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [datas, setDatas] = useState({})
-  const [names, setNames] = useState([])
-  const [currentName, setCurrentName] = useState('')
-
   const dataManager = new DataManager()
 
   useEffect(() => {
@@ -22,21 +17,9 @@ function App() {
     fetchDatas()
   }, [])
 
-  useEffect(() => {
-    const newNames = Object.keys(datas)
-    setNames(newNames)
-  }, [datas])
-
-  const getName = (name) => {
-    setCurrentName(name)
-  }
-
   return (
     <div className="App">
-      <Layout title="Horaire Delta">
-        <Select names={names} getName={getName} />
-        <TableHoraire name={currentName} datas={datas} />
-      </Layout>
+      <Outlet context={[datas, setDatas]} />
     </div>
   )
 }

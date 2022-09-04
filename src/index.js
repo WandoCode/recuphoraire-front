@@ -8,6 +8,7 @@ import { ContextProvider } from './utils/AuthContext'
 import ProtectedRoute from './utils/ProtectedRoute'
 import LoginForm from './composant/LoginForm'
 import Conge from './composant/Conge'
+import Horaires from './composant/Horaires'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -22,15 +23,11 @@ root.render(
                 <App />
               </ProtectedRoute>
             }
-          />
-          <Route
-            path="/out"
-            element={
-              <ProtectedRoute>
-                <Conge />
-              </ProtectedRoute>
-            }
-          />
+          >
+            <Route path="/horaires" element={<Horaires />} />
+            <Route path="/out" element={<Conge />} />
+          </Route>
+
           <Route path="/login" element={<LoginForm />} />
           <Route path="*" element={<Error />} />
         </Routes>
