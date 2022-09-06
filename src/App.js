@@ -20,8 +20,7 @@ function App() {
       setHolidaysDatas(holidays)
     }
 
-    // Prevent from calling multiples times to fetch from API with strict-mode (.holidays's values are doubled in that case)
-
+    // Prevent from calling multiples times to fetch from API with strict-mode(?) (.holidays's values are doubled in that case)
     if (!renderAfterCalled.current) {
       fetchDatas()
     }
