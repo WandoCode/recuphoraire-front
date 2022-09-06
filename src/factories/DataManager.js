@@ -2,7 +2,7 @@ import GoogleSheet from './GoogleSheet.js'
 import { formatHours, capitalizeFirstLetter, formatDate } from './helpers.js'
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001'
-console.log(BASE_URL)
+
 class DataManager {
   constructor() {
     this.holidays = {}
@@ -96,7 +96,7 @@ class DataManager {
       }
     }
   }
-
+  // TODO
   addPolyclinic = () => {}
 
   createStructuredDatas = (datasRaw) => {

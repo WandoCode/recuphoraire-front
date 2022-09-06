@@ -18,6 +18,7 @@ function App() {
       const holidays = dataManager.holidays
       setHolidaysDatas(holidays)
     }
+
     fetchDatas()
   }, [])
 

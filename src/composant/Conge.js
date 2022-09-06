@@ -5,7 +5,7 @@ import Select from './Select.js'
 import uniqid from 'uniqid'
 
 function Conge() {
-  const { holidaysDatas } = useOutletContext()
+  const { holidaysDatas } = useOutletContext({})
   const [names, setNames] = useState([])
   const [currentName, setCurrentName] = useState('')
 
@@ -18,7 +18,6 @@ function Conge() {
 
   const getName = (name) => {
     setCurrentName(name)
-    console.log(name)
   }
 
   const items = () => {
