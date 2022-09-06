@@ -5,7 +5,7 @@ import Select from './Select'
 import TableHoraire from './TableHoraire'
 
 function Horaires(props) {
-  const [datas, setDatas] = useOutletContext()
+  const { datas } = useOutletContext()
   const [names, setNames] = useState([])
   const [currentName, setCurrentName] = useState('')
 

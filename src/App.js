@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 function App() {
   const [datas, setDatas] = useState({})
+  const [holidaysDatas, setHolidaysDatas] = useState({})
   const dataManager = new DataManager()
 
   useEffect(() => {
@@ -13,13 +14,16 @@ function App() {
 
       const formattedDatas = dataManager.formattedDatas
       setDatas(formattedDatas)
+
+      const holidays = dataManager.holidays
+      setHolidaysDatas(holidays)
     }
     fetchDatas()
   }, [])
 
   return (
     <div className="App">
-      <Outlet context={[datas, setDatas]} />
+      <Outlet context={{ datas, setDatas, holidaysDatas, setHolidaysDatas }} />
     </div>
   )
 }
