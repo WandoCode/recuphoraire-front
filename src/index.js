@@ -9,6 +9,7 @@ import ProtectedRoute from './utils/ProtectedRoute'
 import LoginForm from './composant/LoginForm'
 import Conge from './composant/Conge'
 import Horaires from './composant/Horaires'
+import Logout from './utils/Logout'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -28,6 +29,7 @@ root.render(
             <Route path="/out" element={<Conge />} />
           </Route>
 
+          <Route path="/logout" element={<Logout />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="*" element={<Error />} />
         </Routes>

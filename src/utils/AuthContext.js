@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext } from 'react'
 
 const AuthContext = createContext(null)
 
@@ -8,17 +8,22 @@ const initialState = {
 }
 
 function ContextProvider(props) {
-  const [state, setState] = useState(initialState)
+  localStorage.setItem('username', initialState.username)
+  localStorage.setItem('isLoggedIn', initialState.isLoggedIn)
 
   const logIn = (username) => {
-    setState({ username, isLoggedIn: true })
+    localStorage.setItem('username', username)
+    localStorage.setItem('isLoggedIn', true)
   }
 
   const logOut = () => {
-    setState(initialState)
+    localStorage.clear()
+  }
+  const isLoggedIn = () => {
+    return localStorage.getItem('isLoggedIn')
   }
   return (
-    <AuthContext.Provider value={{ state, logIn, logOut }}>
+    <AuthContext.Provider value={{ isLoggedIn, logIn, logOut }}>
       {props.children}
     </AuthContext.Provider>
   )
