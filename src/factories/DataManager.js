@@ -96,8 +96,6 @@ class DataManager {
       }
     }
   }
-  // TODO
-  addPolyclinic = () => {}
 
   createStructuredDatas = (datasRaw) => {
     // Go through each util cells of all sheets
