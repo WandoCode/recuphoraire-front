@@ -10,6 +10,7 @@ import LoginForm from './composant/LoginForm'
 import Conge from './composant/Conge'
 import Horaires from './composant/Horaires'
 import Logout from './utils/Logout'
+import './style/reset.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

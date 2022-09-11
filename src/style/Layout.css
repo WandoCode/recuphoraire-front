@@ -5,8 +5,34 @@ header {
   margin-bottom: 30px;
 }
 
+.layout__nav {
+  margin-left: 35px;
+}
+
+.nav-link {
+  color: rgb(168, 203, 255);
+  font-size: 18px;
+}
+.nav-link:hover {
+  color: rgb(211, 229, 255);
+}
+
+.nav-link.active {
+  color: rgb(247, 247, 247);
+}
+
 .layout__title {
   margin-left: 50px;
   color: azure;
   width: 250px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav__item {
+  margin-right: 25px;
 }
