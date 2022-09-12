@@ -13,7 +13,7 @@ function LoginForm(props) {
 
   const [password, setPassword] = useState('')
   const [username, setUsername] = useState('')
-
+  const [showError, setShowError] = useState(false)
   const handleUsername = (e) => {
     setUsername(e.target.value)
   }
@@ -33,6 +33,8 @@ function LoginForm(props) {
     if (loginIsOk === 'true') {
       logIn(username)
       navigate('/horaires')
+    } else {
+      setShowError(true)
     }
   }
 
@@ -66,6 +68,9 @@ function LoginForm(props) {
               onChange={handlePassword}
             />
 
+            {showError === true && (
+              <div className="error">Utilisateur ou mot de passe incorrect</div>
+            )}
             <input
               type="submit"
               className="form-control btn btn-primary"
