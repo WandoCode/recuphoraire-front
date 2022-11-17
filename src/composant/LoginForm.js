@@ -24,7 +24,7 @@ function LoginForm(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const res = await axios.post(BASE_URL + '/users/login', {
+    const res = await axios.post(BASE_URL + 'users/login', {
       username: username,
       password: password,
     })

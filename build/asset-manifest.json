@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.5ebfcdec.css",
-    "main.js": "/static/js/main.9e2fc82a.js",
+    "main.js": "/static/js/main.bcdffc5a.js",
     "index.html": "/index.html",
     "static/media/close.svg": "/static/media/close.08233535a9321b39bf5f4a13e34fede0.svg",
     "static/media/burger-menu.svg": "/static/media/burger-menu.113d59e2703636dfe157ec8ec962d598.svg",
     "main.5ebfcdec.css.map": "/static/css/main.5ebfcdec.css.map",
-    "main.9e2fc82a.js.map": "/static/js/main.9e2fc82a.js.map"
+    "main.bcdffc5a.js.map": "/static/js/main.bcdffc5a.js.map"
   },
   "entrypoints": [
     "static/css/main.5ebfcdec.css",
-    "static/js/main.9e2fc82a.js"
+    "static/js/main.bcdffc5a.js"
   ]
 }
